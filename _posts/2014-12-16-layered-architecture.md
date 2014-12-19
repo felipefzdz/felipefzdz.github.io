@@ -3,7 +3,7 @@ layout: post
 title: "Layered architecture"
 description: ""
 category: 
-tags: []
+tags: [architecture, ddd]
 ---
 {% include JB/setup %}
 

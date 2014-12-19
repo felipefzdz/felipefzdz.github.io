@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Fleshing out through testing"
+title: "Fleshing out through acceptance testing"
 description: ""
 category: 
-tags: []
+tags: [bdd, atdd, architecture]
 ---
 {% include JB/setup %}
 

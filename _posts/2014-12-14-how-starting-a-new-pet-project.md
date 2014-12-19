@@ -3,7 +3,7 @@ layout: post
 title: "How starting a new pet project"
 description: ""
 category: 
-tags: []
+tags: [skeleton, archetypes, hefesto]
 ---
 {% include JB/setup %}
 

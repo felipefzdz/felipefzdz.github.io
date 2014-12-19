@@ -3,7 +3,7 @@ layout: post
 title: "Defining your data storage"
 description: ""
 category: 
-tags: []
+tags: [ddd, data modeling, microservices, architecture]
 ---
 {% include JB/setup %}
 

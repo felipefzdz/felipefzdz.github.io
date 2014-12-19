@@ -3,7 +3,7 @@ layout: post
 title: "Structuring your code"
 description: ""
 category: 
-tags: []
+tags: [architecture, craftmanship, ddd]
 ---
 {% include JB/setup %}
 
