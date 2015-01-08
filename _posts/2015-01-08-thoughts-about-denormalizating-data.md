@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Thoughts about denormalization data"
+title: "Thoughts about denormalizating data"
 description: ""
 category: 
 tags: []
