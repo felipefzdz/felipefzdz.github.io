@@ -21,22 +21,22 @@ When defining some relational data schema you usually sketch some boxes with you
 
 If your schema is complex and ORM comes handy to transition from relational to objects. However there are some accusations against those framework about being slow, hard to understand and rigid. My main intent with this project is understanding stuff clearly, so I will discard using an ORM.
 
-I will use then some document database to store my data and I will split them in different services. As a first idea, the bounded contexts that I'm going to use are:&nbsp;User Service,&nbsp;Job Service and&nbsp;Job Application Service
+I will use then some document database to store my data and I will split them in different services. As a first idea, the bounded contexts that I'm going to use are:&nbsp;User Service,&nbsp;Job Service and&nbsp;Job Application Service:
 
-*User Service
+**User Service**
 
 1.  CRUD employer
 2.  CRUD jobseeker
 3.  CRUD resume
 
-*Job Service
+**Job Service**
 
 1.  CRUD job
 2.  Save jobs for later viewing
 3.  Get jobs by employee
 4.  Get saved jobs
 
-*Job Application Service
+**Job Application Service**
 
 1.  CRUD job application
 2.  Reporting

@@ -75,7 +75,7 @@ Manipulating collections is when java 8 streams really shines. Try to think how 
                 .orElse(0);
     }
 
-Being seniors a Collection<Senior>. MapToInt method returns an IntStream that has the most typical aggregation operations as sum, max or min. Those guys returns an Optional type that allows you easily to provide a default value, if the collection is empty, using `orElse(0)`.
+Being seniors a Collection<Senior>. MapToInt method returns an IntStream that has the most typical aggregation operations as sum, max or min. Those guys returns an Optional type that allows you easily to provide a default value, if the collection is empty, using orElse(0).
 
 A simple example with filter method doesn't need explanation:
 
