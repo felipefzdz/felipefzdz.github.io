@@ -3,13 +3,13 @@ layout: post
 title: "Testing multithreaded code in Java"
 description: ""
 category: 
-tags: []
+tags: [testing, concurrency]
 ---
 {% include JB/setup %}
 
-Testing multithreaded code is a tough endeavour. The first advice that you get when try to test concurrency is to isolate your concurrent concerns in the code as much as possible. This a general design advice but in this case it's even more mandatory. When you have properly unit tested the logic that is wrapped by the concurrent construct, you can then start thinking in how to test that bit. Otherwise you can spend so many time trying to figure out what's the concurrent problem, being in the end a simple flawed business logic.
+Testing multithreaded code is a tough challenge. The first advice that you get when try to test concurrency is to isolate your concurrent concerns in the code as much as possible. This a general design advice but in this case it's even more important. When you have properly unit tested the logic that is wrapped by the concurrent construct, you can start thinking about how to test that bit. Otherwise you can spend so many time trying to figure out what's the concurrent problem, being in the end a simple flawed business logic.
 
-Once you got that covered, you can think in your strategy to test concurrent systems. In [Goos](http://www.growing-object-oriented-software.com/) they cover how you can do it. [Here](https://github.com/npryce/goos-code-examples/tree/master/testing-multithreaded-code/src/book/example/threading/races) you can find the code that I'm going to explain:
+Once you got that covered, you can think in your strategy to test concurrent systems. [Goos](http://www.growing-object-oriented-software.com/) covers how you can do it. [Here](https://github.com/npryce/goos-code-examples/tree/master/testing-multithreaded-code/src/book/example/threading/races) you can find the code that I'm going to explain:
 
 First, let's have a look into the SUT:
 
@@ -52,7 +52,7 @@ As you can see, this class is not thread safe, as it's exposing some state throu
 
 The stress tester will exercise the method n loops with m threads. As our method is incrementing by one, we should see that n*m is equal to the counter.count().
 
-The interesting class, though, is the MultithreadedStressTester
+The interesting class is the MultithreadedStressTester though:
 
 
 	public void stress(final Runnable action) throws InterruptedException {
@@ -83,7 +83,7 @@ The interesting class, though, is the MultithreadedStressTester
         }
     }
 
-If you execute that test you will receive different results and sometimes it's even passing! That's because this test is not deterministic, we can't assure how the threads will interleave in every execution. If we want to be as sure as possible that this test finds the possible buf, we should increase the number of threads and iterations, but with the obvious time trade-off.
+If you execute that test you will receive different results and sometimes it's even passing! That's because this test is not deterministic, we can't assure how the threads will interleave in every execution. If we want to be as sure as possible that this test finds the possible bug, we should increase the number of threads and iterations, but with the obvious time trade-off.
 
 You can use a more deterministic approach using [Weaver](https://github.com/google/thread-weaver). To understand how it works let's illustrate it with an example. Let's say that we have an in-memory and not thread-safe store:
 
@@ -101,7 +101,7 @@ We have some service that access to a repo that wraps that store:
 	6       }
 
 
-That service is a singleton living in a server that spawns a thread per request, so we'd like to execute that piece atomically. We could use the stress test non-deterministic approach or we could use Weaver. If we think deeply in this problem what we want to test is every combination of the following (as an example, Thread 1 executes line 1 in moment x and Thread 2 executes line 1 in moment x, would be T1/1 : T2/1)
+That service is a singleton living in a server that spawns a thread per request, so we'd like to execute that piece atomically. We could use the stress test non-deterministic approach or we could use Weaver. If we think deeply in this problem, what we want to test is every combination of the following (as an example, Thread 1 executes line 1 in moment x and Thread 2 executes line 1 in moment x, would be -> T1/1 : T2/1)
 
 * T1/1 : T2/1
 * T1/1 : T2/2

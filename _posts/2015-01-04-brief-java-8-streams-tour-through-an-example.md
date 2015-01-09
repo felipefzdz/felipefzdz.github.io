@@ -3,13 +3,13 @@ layout: post
 title: "Brief Java 8 streams tour through an example"
 description: ""
 category: 
-tags: []
+tags: [functional programming, pet project]
 ---
 {% include JB/setup %}
 
-The code and spec for this project can be found here.
+The code and spec for this project can be found [here](https://github.com/olid16/functionalEmployees).
 
-Let's start talking about the parser. One of this project intents is using Java 8 lambdas to solve problems in collections views as streams. We could think about a file separated by lines as a stream of strings. So we'll use lines method from Buffered reader class to create a stream.
+Let's start talking about the parser. One of this project intents is using Java 8 lambdas to solve problems using streams. We could think about a file separated by lines as a stream of strings. So we'll use lines method from Buffered reader class to create a stream.
 
     public ParsingResult parse(String path) {
         try (BufferedReader reader = createReader(path)){
@@ -46,7 +46,7 @@ Something interesting that we can see in this code is the use of method referenc
 Now we'll see one of the problems with Java8 streams. Our parser tries to be as general as possible. In order to accomplish that we'll use the following Parsing Types:
 
 * Entry. This type is just a wrapper for a key/value pair. Here I'm missing some built-in types in languages like Scala. The key will be the corresponding header and the value the content in the file. That means the the semantic association in our csv files is hold by index. 
-* CsvEntity. This entity holds a list of entries, that following some business rules, can generate a domain entity.
+* CsvEntity. This entity wraps a list of entries, that following some business rules, can generate a domain entity.
 
 With those rules on mind, we need some construct that allows us to mix header and content lines into vertical slices or Entries. In Scala there are some high-order functions like zip, but java 8 api is missing that one. In order to keep and use the index of the collection in which we base our stream we need to write this kind of not awesome code:
 

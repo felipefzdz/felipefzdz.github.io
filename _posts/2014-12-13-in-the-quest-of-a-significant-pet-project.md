@@ -3,16 +3,16 @@ layout: post
 title: "In the quest of a significant pet project"
 description: ""
 category: 
-tags: [hefesto]
+tags: [pet project, learning by doing]
 ---
 {% include JB/setup %}
 
-There are so many cool ways of keeping yourself up to date in programming business. Learning by doing is one of the approaches and maintaining a pet project is one of the strongest.
+There are so many cool ways about keeping yourself up to date in programming business. Learning by doing is one of the approaches and spending time on a pet project is an amazing way of practicing that.
 
-When starting a pet project you have to ask yourself what you want to mainly achieve.
+When starting a pet project you have to ask yourself what you want to achieve.
 
 *   Solving a problem (hopefully a real problem, something that you miss and nobody has implemented a proper solution yet)
-*   Coping with a rough domain. Moving from CRUD to for instance a web crawler, a parser or some DSL tool.
+*   Coping with a rough domain. Moving from CRUD to, for instance, a web crawler, a parser or some DSL tool.
 *   Learning a new language. And remember:
 
 ![]({{ site.url }}/assets/newlanguage.png)
@@ -21,4 +21,4 @@ When starting a pet project you have to ask yourself what you want to mainly ach
 
 The pet project that I'm going to dissect in following posts will mainly focus in last point. It will address a simple domain, will be written in my native programming language, Java, and won't try to solve a real problem at all.
 
-I got the spec from&nbsp;[here](https://github.com/TheLadders/object-calisthenics#exercise). As you can see the guys from The Ladders propose that as exercise for practising [Object Calisthenics](http://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf). We'll talk further about OOP and Clean Code in the future.
+I grab the spec from&nbsp;[here](https://github.com/TheLadders/object-calisthenics#exercise). As you can see the guys from The Ladders propose the spec as exercise for practising [Object Calisthenics](http://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf). We'll talk further about OOP and Clean Code in the future.

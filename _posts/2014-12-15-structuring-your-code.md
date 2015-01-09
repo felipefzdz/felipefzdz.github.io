@@ -7,17 +7,17 @@ tags: [architecture, craftmanship, ddd]
 ---
 {% include JB/setup %}
 
-Once you've defined what is the best language, platform, framework, libraries and so on, you need to decide how you're going to write your code. What I'm going to say is valid to most domains, but let's focus in a middleware with two ports: rest api and a DB.
+Once you've defined which is the best language, platform, framework, libraries and so on, you need to decide how you're going to organize your code. What I'm going to say is valid to most domains, but let's focus in a middleware with two ports: rest api and a DB.
 
 Old approaches could suggest you to write software in horizontal slices. You could write first your persistence layer, you could even assign that task to a team expert in ORMs and DBs, and then write the other layers. This approach goes against Agile principles, and nowadays is not so popular. But even that we still structure our code in technical layers.
 
-In [this post](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html), Uncle Bob notes that most projects,&nbsp;<span>when you have a quick overview on them</span>, tell you about the technical theme but not about the domain. You can easily spot that the project is following MVC, that is using RoR or whatsoever, but, if you want to know if it's a financial, health or news application, you'll need to dig into the details.
+In [this post](http://blog.8thlight.com/uncle-bob/2011/09/30/Screaming-Architecture.html), Uncle Bob notes that most projects,&nbsp;<span>when you have a quick overview on them</span>, tell you about the technical theme but not about the domain. You can easily spot that the project is following MVC, that is using RoR or whatever, but, if you want to know if it's a financial, health or news application, you'll need to dig into the details.
 
-Lately trends in programming try to overcome some obscurity not inherent to programming. Why don't we write our software as it were intended to be read by business guys? I'm not only talking about BDD, aka specification by example, but about using an [Ubiquitous Language](http://martinfowler.com/bliki/UbiquitousLanguage.html)&nbsp;when naming variables, methods, classes, packages or services.&nbsp;
+Lately trends in programming try to overcome some obscurity not inherent to programming. Why don't we write our software as it were intended to be read by business guys? I'm not only talking about BDD, aka specification by example, but also about using an [Ubiquitous Language](http://martinfowler.com/bliki/UbiquitousLanguage.html)&nbsp;when naming variables, methods, classes, packages or services.&nbsp;
 
-When I explain those concepts to a newbie I always say the same, you should write your code as a child or a business guy is going to read it in the future. Pun intended ;) But the point is that we should try programmers as children when they're going to read your code. I don't want to spend &nbsp;cognitive effort understanding code that should have been written using a shared vocabulary first.
+When I explain those concepts to a newbie I always say the same, you should write your code as if a child or a business guy is going to read it in the future. Pun intended ;) But the lesson is that we should think in programmers as children when they're going to read your code. I don't want to spend &nbsp;cognitive effort understanding code that should have been written using a shared vocabulary in the beginning.
 
-And by the way, the communication with business will be a pleasure if you follow this advice. Let's say that you implement a web crawler and you decide in your code talking about URLs, put your business analyst always talks about Pages, but you don't like that name and decide to promote your URL name into a more powerful Link. Sounds like a messy plan, right?
+And, by the way, the communication with business will be a pleasure if you follow this advice. Let's say that you implement a web crawler and you decide that in your code you're going to talk about URLs, but your business analyst always talks about Pages. You don't like that name and decide to promote your URL into a more powerful Link. Sounds like a messy plan, right?
 
 In [this talk](https://skillsmatter.com/skillscasts/5742-interaction-driven-design), Sandro Mancuso shows how convenient is choosing a domain driven approach.
 
