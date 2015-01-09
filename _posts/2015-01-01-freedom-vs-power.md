@@ -7,11 +7,11 @@ tags: [concurrency, philosophy, functional programming, oop]
 ---
 {% include JB/setup %}
 
-We usually think about freedom in positive terms. A tool is able to achieve something because is free to do something. What is even more interesting is thinking the other way around. A tool is able to achieve something, or at least better, faster or stronger, thanks to some limitation in its freedom. Let's see some general examples before of getting into programming arena:
+We usually think about freedom in positive terms. A tool is able to achieve something because it's free to do something. What is even more interesting is thinking the other way around. A tool is able to achieve something, or at least better, faster or stronger, thanks to some limitation in its freedom. Let's see some general examples before of getting into the programming arena:
 
 * The elbow, as part of the arm, provides more strength and control thanks to its limited movement range. 
 * A train is more convenient than a car if the journey is straightforward. The lack of freedom in the train path makes it faster and more efficient.
-* A paradoxical example is included in politic liberalism. That ideology tries to maximise the freedom of every human being, but pretty much every liberalism flavour supports some kind of freedom restriction. For instance, taxes remove the individual freedom of spending in whatever we want, but if we reinvert that money in children education, we'll maximise the future freedom of those kids. Theory and practice say that if a society is full of educated and free men, that society will enjoy more freedom.
+* A paradoxical example is included in politic liberalism. That ideology tries to maximise the freedom of every human being, but pretty much every liberalism flavour supports some kind of freedom restriction. For instance, taxes remove the individual freedom of spending in however we want, but if we reinvert that money in children education, we'll maximise the future freedom of those kids. Theory and practice say that if a society is full of educated and free men, that society will enjoy more freedom.
 
 Programming history is full of freedom restrictions. In fact, every technique based in abstractions is based in power through limitations. We, as programmers, really know that it's not possible, not desirable, to understand deeply every step of a simple computation. Every layer, from OS to high level frameworks, hides complexity and restricts freedom. As noted in this Uncle Bob's post, programming paradigms can be understood through it's more notable restrictions:
 
