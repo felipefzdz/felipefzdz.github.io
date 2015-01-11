@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
 /*
 HTML5 display definitions from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
@@ -401,8 +405,8 @@ Calculation should be done via  http://j.mp/rNg5uA
 No styleguide reference.
 */
 body {
-  font-family: consolas, monaco, monospace;
-  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
   line-height: 1.625em;
 }
 /*
@@ -418,7 +422,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 h1,
 .h1 {
@@ -551,10 +555,10 @@ html {
   background: url('/assets/themes/the-program/skin/100-90-5-monochrome.png');
   background-repeat: repeat;
   background-position: 0 0;
-  background-color: #e2e2de;
+  background-color: #fafafa;
 }
 .body .unit-body {
-  background-color: #fafafa;
+  background-color: #fff;
 }
 /* LINK */
 a:link {
@@ -589,13 +593,16 @@ pre {
 /* meta */
 /* HEADER
 --------------------------------------------------------------------------------- */
-.the-header .logo {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+.the-header .logo a {
+  font-family: 'Fjalla One', sans-serif;
+  color: orange;
   margin: 0;
 }
-.the-header .logo a:visited {
-  color: #2d2d2d;
+
+.the-header .logo a:hover{
+  color: orange !important;
 }
+
 .the-header .nav-global {
   text-transform: uppercase;
 }
@@ -609,11 +616,11 @@ pre {
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article header {
-  border-bottom: 5px solid rgba(21, 25, 25, 0.8);
+  border-bottom: 1px solid rgba(171, 171, 171, 0.8);
   margin-bottom: 21px;
 }
 .unit-article header h1 {
-  color: #2d2d2d;
+  color: #444;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -655,15 +662,17 @@ pre {
 .unit-article .entry-content:first-child h6 {
   margin-top: 0;
 }
-.unit-article a:link {
-  border-bottom: 1px dashed #c26164;
+
+.entry-content .entry-content a:link{
+  color: orange;
+  border-bottom: none;
 }
-.unit-article a:visited {
-  border-bottom: 1px dashed #ad4346;
+
+.entry-content .entry-content a:visited{
+  color: #B3B2B2;
+  border-bottom: none;
 }
-.unit-article a:hover {
-  border-bottom: 1px dashed #d08688;
-}
+
 .unit-article blockquote {
   border-left: 1em solid rgba(21, 25, 25, 0.8);
   padding-left: 1em;
@@ -735,7 +744,7 @@ pre {
   margin-bottom: 0;
 }
 .unit-article .list-linear .list-head {
-  margin-right: 4px;
+  margin-right: 12px;
 }
 .unit-article .list-category a,
 .unit-article .list-tag a {
@@ -778,7 +787,7 @@ pre {
   position: relative;
 }
 .unit-article .unit-foot nav ul {
-  list-style: none;
+  list-style: square;
 }
 .unit-article .unit-foot nav ul li {
   display: inline;
@@ -807,7 +816,6 @@ pre {
   vertical-align: middle;
 }
 .layout-page .tag_box a {
-  background-color: #99cc99;
   float: left;
   border: 1px solid #448844;
   padding: 3px 6px 3px 6px;
@@ -847,7 +855,7 @@ pre {
   border: 1px solid #77bb77;
 }
 .layout-page .tag_box span {
-  background-color: #fafafa;
+  background-color: #fff;
   border: 1px solid #99cc99;
   padding: 1px 5px;
   -webkit-border-radius: 10px;
@@ -879,7 +887,7 @@ pre {
   border: 0;
 }
 .the-footer ul {
-  list-style: square;
+  list-style: none;
   padding-left: 1em;
 }
 .the-footer address {
@@ -911,7 +919,7 @@ pre {
 .the-footer {
   background-color: #1a1a1a;
   background-color: rgba(21, 25, 25, 0.8);
-  color: #fafafa;
+  color: #fff;
   color: rgba(250, 250, 250, 0.8);
   padding: 26px;
 }
@@ -960,7 +968,7 @@ pre {
     height: 26px;
   }
   .the-header .unit-head .nav-global li a:hover {
-    background-color: #fff04a;
+    background-color: orange;
     color: #474747;
   }
   .the-header .unit-head .nav-global li:nth-child(2) {
@@ -1476,5 +1484,39 @@ hr {
 .right {
   *display: inline;
   float: right;
+}
+
+.posts {
+  list-style: none;
+  line-height: 2.5em;
+}
+
+.posts li span {
+  color: #ccc
+}
+
+.social-icons {
+  background: orange;
+  border-radius: 150px;
+  -webkit-border-radius: 150px; 
+  -moz-border-radius: 150px; 
+}
+
+.social-icons-li{
+  margin-top: 15px;
+  float:right;
+  padding-right: 50px;
+}
+
+.bio{
+  padding-right: 50px;
+}
+
+.post-text{
+  padding: 20px 50px 0 50px;
+}
+
+p img{
+  text-align: center;
 }
 
