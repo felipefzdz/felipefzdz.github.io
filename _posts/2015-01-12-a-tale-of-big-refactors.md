@@ -11,7 +11,7 @@ In [Hefesto](https://github.com/olid16/hefesto) I've followed some of [this arch
 
 I'm using [Spark](http://sparkjava.com/) for rest adapter. Why do I need to replace it?
 
-1. I would like to use [Swagger](swagger.io) to document my APIs. As you can see [here](https://github.com/olid16/hefesto/issues/8), there is not integration yet between Spark and Swagger.
+1. I would like to use [Swagger](http://swagger.io) to document my APIs. As you can see [here](https://github.com/olid16/hefesto/issues/8), there is not integration yet between Spark and Swagger.
 2. As I'm splitting my domain into different services, I'm starting to think in more devops concerns, as circuit breakers or service discovery. Spark is a quite lightweight library, so maybe I could use another framework with more powerful integration points.
 3. From the very beginning, my intent has been being able to discard libraries easily, for its own sake. That's why I didn't have a look into Play or Spring.
 
@@ -19,21 +19,21 @@ I've got professional experience with Dropwizard, and I remember it with pleasur
 
 The first problem that I faced in the migration is the library versions collisions. Dropwizard and Spark bring with them so many libraries and some of them are incompatibles. Stacktraces use to be quite esoteric. The best approach is to use this command, mvn dependency:tree, and then see which libraries are holding different versions of the same dependency. As i'm going to get rid in a near future of spark, my temporal solution is excluding those libraries:
 
-			<dependency>
-                <groupId>com.sparkjava</groupId>
-                <artifactId>spark-core</artifactId>
-                <version>${spark-core.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-simple</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.eclipse.jetty</groupId>
-                        <artifactId>jetty-server</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+	<dependency>
+		<groupId>com.sparkjava</groupId>
+		<artifactId>spark-core</artifactId>
+		<version>${spark-core.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+            </exclusion>
+        </exclusions>
+	</dependency>
             
 The next problem was an infrastructure leak into the domain. Let's see the code for creating a user with spark:
  
